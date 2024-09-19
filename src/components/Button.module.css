@@ -1,0 +1,23 @@
+.custom_button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom_button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.custom_button:active {
+  background-color: #004085; /* Even darker blue on click */
+}
+
+.custom_button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}

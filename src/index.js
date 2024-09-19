@@ -1,13 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Topbar from "./components/topBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBar from "./NavBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Services from "./pages/Services";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import Applynow from "./pages/Applynow";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Topbar />
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Applynow" element={<Applynow />} />
+      </Routes>
+    </Router>
+    <Footer />
   </React.StrictMode>
 );
 

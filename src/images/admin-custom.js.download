@@ -1,0 +1,213 @@
+
+//Cookie setter
+function setcookie(name, value, duration){
+	if(duration){
+		var date = new Date();
+		date.setTime(date.getTime() + (duration * 86400000));
+		value += "; expires=" + date.toGMTString();
+	}
+	document.cookie = name + "=" + value;
+};
+
+//Gets the cookie value
+function getcookie(name){
+	value = document.cookie.match('(?:^|;)\\s*'+name+'=([^;]*)');
+	return value ? unescape(value[1]) : false;
+};
+
+//Removes the cookies
+function removecookie(name){
+	setcookie(name, '', -1);
+};
+
+function set_fullscreen(full){
+	
+	// We need to detect
+	if(full == -1){
+		full = $("#toggle-fullscreen").hasClass("dashicons-editor-contract") ? 0 : 1;
+	}
+	
+	full = parseInt(full);
+	
+	if(full == 1){
+		$("#toggle-fullscreen").addClass("dashicons-editor-contract");
+		$("#toggle-fullscreen").removeClass("dashicons-editor-expand");
+		$("#setup_screen").addClass('screen-expanded');
+		setcookie("sp-setup-fullscreen", 1, 10);
+	}else{
+		$("#toggle-fullscreen").addClass("dashicons-editor-expand");
+		$("#toggle-fullscreen").removeClass("dashicons-editor-contract");
+		$("#setup_screen").removeClass('screen-expanded');
+		setcookie("sp-setup-fullscreen", 0, 10);
+	}
+};
+
+jQuery(document).ready(function(){
+	
+	// Hide action buttons from edit post
+	if(jQuery('body.post-php, body.post-new-php').find('#submitdiv').length < 1){
+		jQuery('#sitepad-submit-actions').hide();
+	}
+	
+	var site_menu_height = function(){
+		jQuery(document).resize(function(){
+			if(window.matchMedia("(min-width:576px)").matches) {
+				var top_height = jQuery('.site-menu-header').offset().top;
+				jQuery('.site-menu-header').css({'min-height': ' calc(100vh - '+top_height+'px)'});
+			}
+		});
+	};
+	
+	var show_down_icon = function(parm = ''){
+		
+		jQuery('.site-nav').children('li').each(function(){
+			
+			var ele = jQuery(this);
+			var sub_nav = ele.find('.site-sub-nav');
+			
+			// Get the window url and set the left menu active
+			var url = window.location.href;
+			//url = url.split('/')
+			//url= url.slice(-1)[0];
+			//console.log(url);
+			
+			ele.find('.active').each(function(){
+					if(sub_nav.length > 0){
+						sub_nav.show();
+					}				
+			});
+			
+			// Set arrow direction
+			var sub_nave_arrow = function(right){
+				if(sub_nav.length > 0){
+					if(sub_nav.is(":visible") || right){
+						ele.find('>.site-nav-link').removeClass('site-arrow-down');
+						ele.find('>.site-nav-link').addClass('site-arrow-right');
+					}else{
+						ele.find('>.site-nav-link').removeClass('site-arrow-right');
+						ele.find('>.site-nav-link').addClass('site-arrow-down');
+					}
+				}
+			}
+			sub_nave_arrow(true);
+			
+			// unbind the click event
+			ele.find('.site-nav-link').first().unbind("click");
+			if(parm == "unbind"){
+				sub_nav.removeAttr("style");
+				return true;
+			}
+			
+			// On-click left name menu handler
+			ele.find('.site-nav-link').first().on('click', function(){
+				ele.parent().find('.site-nav-link').removeClass('active');
+				jQuery(this).addClass('active');
+				sub_nave_arrow();
+				sub_nav.toggle(500, "swing");
+			});
+			
+		});
+		
+	};
+	
+	// collapse left site nav menu
+	var collapse_left_nav = function(){
+		
+		jQuery('.site-left-nav-toggler').on('click', function(){
+			var tELe = jQuery(this);
+			var lNav = tELe.closest('#wpwrap').find('.lnav-col');
+			if(window.matchMedia("(min-width:768px)").matches) {
+				
+				lNav.toggleClass('collapsed');
+				if(lNav.hasClass('collapsed')){
+					show_down_icon("unbind");
+					setcookie("sp-menu-collapsed", 1, 100);
+				}else{
+					show_down_icon();
+					removecookie("sp-menu-collapsed");
+				}
+				
+			}else{
+				lNav.removeClass("collapsed");
+				removecookie("sp-menu-collapsed");
+				lNav.toggleClass("show");
+				
+				// Start animation after 100ms
+				setTimeout(function(){
+					lNav.toggleClass("animated");
+				}, 100);
+			}
+			
+		});
+		
+		// Close admin menu 
+		jQuery('.site-menu-header .close-menu').on('click', function(){
+			var tELe = jQuery(this);
+			tELe.closest('.lnav-col').removeClass("show animated");
+		});
+		
+	};
+	
+	// Set Sub menu position
+	var sub_nav_position = function(navEle, setTop){
+			
+			var top = '';
+			setTop = setTop || false;
+			
+			if(navEle.closest('.lnav-col.collapsed').length < 1){
+				setTop = false;
+			}
+						
+			if(setTop){
+				var adminMenu = navEle.closest('#adminmenu');
+				var menuRect = adminMenu[0].getBoundingClientRect();
+				var navHeight = parseInt(navEle.css('height'));
+				
+				top = navEle.closest('li')[0].getBoundingClientRect().top;
+				top = top - menuRect.top;
+				
+				if( (navHeight + top) > menuRect.bottom){
+					top = top - (navHeight + top - menuRect.bottom) - 60;
+				}
+			}
+			
+			navEle.css({'top':top});
+	};
+	
+	var showTimeOut = {};
+	
+	// Set sub menu position
+	jQuery('.site-nav li').hover(function(){
+		var navEle = jQuery(this);
+		var cEle = navEle.children('.site-sub-nav');
+		
+		if(cEle.length < 1){
+			return;
+		}
+		
+		clearTimeout(showTimeOut);
+
+		// first hide all the sub nav
+		jQuery('.site-nav .site-sub-nav').not(cEle).removeClass('show-nav');
+		cEle.addClass('show-nav');
+		sub_nav_position(navEle.children('.site-sub-nav'), true);
+	},
+	function(){
+		var navEle = jQuery(this);
+		var cEle = navEle.children('.site-sub-nav');
+		
+		if(cEle.length < 1){
+			return;
+		}
+		
+		showTimeOut = setTimeout(function(){
+			navEle.children('.site-sub-nav').removeClass('show-nav');
+			sub_nav_position(cEle);
+		}, 400);
+	});
+	
+	//site_menu_height();
+	show_down_icon();
+	collapse_left_nav();
+});
+

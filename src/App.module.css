@@ -1,0 +1,133 @@
+.content {
+  color: rgb(216, 216, 216);
+}
+.heading_div {
+  width: 40%;
+  padding: 20px;
+  position: relative;
+}
+.heading_div h2 {
+  font-size: 45px;
+}
+em {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.how_div {
+  background-color: white;
+  margin-top: 60px;
+  color: #113358;
+  padding: 10px;
+  width: 80%;
+  left: 10%;
+  right: 0%;
+  position: relative;
+
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+.how_div h3 {
+  font-size: 23px;
+}
+/* STEPS CSS start */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.step-left-1 {
+  width: 30%;
+  position: relative;
+  top: 30px;
+}
+.step-right {
+  width: 30%;
+  position: relative;
+  top: 220px;
+  left: auto;
+}
+.step-right-2 {
+  width: 45%;
+  position: relative;
+  top: 150px;
+  left: auto;
+}
+
+.step-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  top: 160px;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #003b73;
+}
+
+.step-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 10%;
+  position: relative;
+}
+
+.step-number {
+  background-color: #003b73;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 2px;
+  background-color: #c4c4c4;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-left {
+    width: 100%;
+    position: absolute;
+  }
+  .step-right {
+    width: 100%;
+    position: absolute;
+  }
+
+  .step-line {
+    display: none;
+  }
+}
+/* END */
+/* About US Start */
+.aboutUs {
+  background-color: rgb(217, 220, 221);
+  width: 100%;
+  overflow: hidden;
+  background-attachment: scroll;
+}
+.aboutUs h2 {
+  font-size: 45px;
+  font-family: "Poppins";
+  font-weight: 700;
+  line-height: 72px;
+}
