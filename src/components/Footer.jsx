@@ -5,7 +5,7 @@ import FacebookLogo from "../images/2.png";
 function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className="container-fluid footer">
         <div className="container">
           <div className="row">
             {/* <!-- Logo and description --> */}
@@ -13,7 +13,7 @@ function Footer() {
               <div className="footer-logo">
                 <div style={{ width: 300 }}>
                   <a href="https://www.webridge.co.za/">
-                    <img src={LogoImg} width={300} />{" "}
+                    <img className="" src={LogoImg} width={300} />{" "}
                   </a>
 
                   <p>
@@ -29,13 +29,13 @@ function Footer() {
               <h5>Useful Links</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/Contact">Apply Now</a>
+                  <a href="/Applynow">Apply Now</a>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href="/Services">Services</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="/Contact">Contact</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>
@@ -46,18 +46,23 @@ function Footer() {
             {/* <!-- BFASA Membership --> */}
             <div className="col-lg-3 col-md-6 mb-4">
               <h5>We are members of</h5>
-              <img
-                src={BFAImg}
-                alt="BFASA Logo"
-                width={300}
-                // className="img-fluid"
-              />
+              <a href="https://bfasa.org.za/" target="_blank">
+                <img
+                  src={BFAImg}
+                  alt="BFASA Logo"
+                  width={300}
+                  // className="img-fluid"
+                />
+              </a>
             </div>
 
             {/* <!-- Support Group --> */}
             <div className="col-lg-2 col-md-6 mb-4">
               <h5>Need support?</h5>
-              <a href="#" className="d-flex align-items-center">
+              <a
+                href="https://web.facebook.com/groups/SARoadAccidentSupportGroup"
+                className="d-flex align-items-center"
+              >
                 <img
                   src={FacebookLogo}
                   alt="Facebook"
@@ -71,11 +76,13 @@ function Footer() {
             {/* <!-- Support Motor Vehicle Accident Fund --> */}
             <div className="col-lg-3 col-md-6 mb-4">
               <h5>We proudly support</h5>
-              <img
-                src={MVAccidentLogo}
-                alt="Motor Vehicle Accident Fund"
-                className="img-fluid"
-              />
+              <a href="https://motorvehicleaccidentfund.co.za/" target="_blank">
+                <img
+                  src={MVAccidentLogo}
+                  alt="Motor Vehicle Accident Fund"
+                  className="img-fluid"
+                />
+              </a>
             </div>
             {/* <!-- Follow Us --> */}
             <div className="col-lg-2 col-md-6 mb-4">

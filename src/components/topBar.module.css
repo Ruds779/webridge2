@@ -17,11 +17,12 @@
   margin-left: 10px;
 }
 .svg {
-  margin: 5px;
+  margin: 10px;
 }
 .a {
   color: white;
   text-decoration: none;
+  margin: 10px;
 }
 a:hover {
   text-decoration: underline;

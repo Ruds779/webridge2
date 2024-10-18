@@ -5,3 +5,10 @@
   text-align: center;
   position: relative;
 }
+.whiteDiv h3 {
+  font-size: 30px;
+  color: #113358;
+  line-height: 1.65em;
+  font-weight: bold;
+  text-transform: uppercase;
+}

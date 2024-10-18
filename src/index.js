@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Topbar from "./components/topBar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 import NavBar from "./NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Services from "./pages/Services";
@@ -13,6 +14,8 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Applynow from "./pages/Applynow";
+import Careers from "./components/Careers";
+import Blog from "./pages/Blog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +29,8 @@ root.render(
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Applynow" element={<Applynow />} />
+        <Route path="/Careers" element={<Careers />} />
+        <Route path="/Blog" element={<Blog />} />
       </Routes>
     </Router>
     <Footer />

@@ -1,15 +1,8 @@
-import ContentBelow from "../components/ContentBelow";
-import Head from "../components/Head";
 import classes from "../components/Contact.module.css";
-import background from "../images/services_background.png";
 import mapImg from "../images/map-marked-alt.png";
-
-function Contact() {
+function ContactUsBelow() {
   return (
     <>
-      <Head imageUrl={background}>
-        <h2 className="heading_space">Contact Us</h2>
-      </Head>
       <div className={classes.whiteDiv}>
         <div>
           <h3>Contact Us</h3>
@@ -123,4 +116,5 @@ function Contact() {
     </>
   );
 }
-export default Contact;
+
+export default ContactUsBelow;

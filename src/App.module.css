@@ -1,14 +1,50 @@
 .content {
   color: rgb(216, 216, 216);
 }
-.heading_div {
-  width: 40%;
-  padding: 20px;
-  position: relative;
+@media (min-width: 992px) {
+  .heading_div {
+    width: 40%;
+    padding: 20px;
+    position: relative;
+  }
+  .heading_div h2 {
+    font-size: 45px;
+  }
+  /* Top paragraph */
+  .did_you_know {
+    font-size: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    font-weight: 400;
+  }
+
+  /* Step blocks */
+  .step-3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    top: 160px;
+  }
+
+  .step-right-2 {
+    position: relative;
+    width: 75%;
+    align-items: center;
+    display: flex;
+    left: 60px;
+    top: 170px;
+  }
+  .step-4 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 75%;
+    left: 60px;
+    top: 370px;
+  }
 }
-.heading_div h2 {
-  font-size: 45px;
-}
+
 em {
   font-size: 20px;
   font-weight: 300;
@@ -16,21 +52,15 @@ em {
 }
 .how_div {
   background-color: white;
-  margin-top: 60px;
-  color: #113358;
-  padding: 10px;
-  width: 80%;
-  left: 10%;
-  right: 0%;
-  position: relative;
+  padding-top: 60px;
 
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+  color: #113358;
 }
 .how_div h3 {
   font-size: 23px;
 }
-/* STEPS CSS start */
+
+/* How to CSS start */
 .steps-container {
   display: flex;
   justify-content: space-between;
@@ -48,20 +78,6 @@ em {
   position: relative;
   top: 220px;
   left: auto;
-}
-.step-right-2 {
-  width: 45%;
-  position: relative;
-  top: 150px;
-  left: auto;
-}
-
-.step-1 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-  top: 160px;
 }
 
 .content h3 {
@@ -97,6 +113,9 @@ em {
   background-color: #c4c4c4;
   height: 100px;
 }
+.a {
+  color: black;
+}
 
 @media (max-width: 768px) {
   .steps-container {
@@ -125,9 +144,23 @@ em {
   overflow: hidden;
   background-attachment: scroll;
 }
+.aboutUs p {
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #202526;
+  font-weight: 300;
+}
 .aboutUs h2 {
   font-size: 45px;
   font-family: "Poppins";
   font-weight: 700;
   line-height: 72px;
+  color: #347cb6;
+}
+.aboutUs h4 {
+  font-size: 30px;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 48px;
+  color: #347cb6;
 }

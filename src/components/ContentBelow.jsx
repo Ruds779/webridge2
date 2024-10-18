@@ -1,18 +1,20 @@
 function ContentBelow({ children }) {
   const contentStyle = {
     backgroundColor: "#113358",
-    color: "white",
-    height: "100%",
-    margin: "0px",
-    padding: "0px",
+    display: "flex", // Use flexbox to center content
+    justifyContent: "center", // Center horizontally
+    alignItems: "center", // Center vertically
+    //height: "100vh", // Set height to cover the full viewport (or any preferred height)
     overflow: "hidden",
   };
+
   return (
-    <>
-      <div style={contentStyle}>
-        <div className="container p-3 my-1 text-white">{children}</div>
+    <div style={contentStyle}>
+      <div className="container-fluid m-4 p-2 mx-auto text-white">
+        {children}
       </div>
-    </>
+    </div>
   );
 }
+
 export default ContentBelow;

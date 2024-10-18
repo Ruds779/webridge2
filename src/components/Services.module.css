@@ -1,0 +1,80 @@
+.a {
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+.h2 {
+  font-size: 45px;
+}
+.p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  color: #798082ff;
+}
+.background-image-div-1 {
+  background-image: url("../images/Heading-4.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.background-image-div-2 {
+  background-image: url("../images/Heading-1-1.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.background-image-div-3 {
+  background-image: url("../images/Heading-2.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.background-image-div-4 {
+  background-image: url("../images/Heading-3.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.ol {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  color: #798082ff;
+}
+.a:hover {
+  text-decoration: none;
+}
+.block_div {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+section {
+  /* Animation */
+  animation-delay: 0.6s;
+  animation-name: fadeInLeft;
+  animation-duration: 0.5s; /* Adjust as needed */
+  animation-fill-mode: forwards;
+
+  /* Transition */
+
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

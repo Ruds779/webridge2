@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./Button.module.css"; // Add this to include CSS styling
 
-function Button({ name }) {
+function Button({ name, link }) {
+  const navigate = useNavigate();
+
+  const handleApply = () => {
+    navigate(link);
+  };
+
   return (
-    <button type="submit" className={classes.custom_button}>
+    <button className={classes.custom_button} onClick={handleApply}>
       {name}
     </button>
   );
