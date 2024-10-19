@@ -3,9 +3,11 @@ import Head from "../components/Head";
 import background from "../images/services_background.png";
 import road from "../images/road.png";
 import PropImg from "../images/Prop_Icon.webp";
-
 import classes from "../components/Services.module.css";
 import Button from "../components/Button";
+import AttorneyImg from "../images/Attorney_Serv.webp";
+import ProperteyFinImg from "../images/Property_Finance.webp";
+import BusinessGrowthImg from "../images/BusinessGrowth.webp";
 
 function Blocks({ left, right }) {
   return (
@@ -59,10 +61,10 @@ function Services() {
             <div className="col-md-3 col-lg-3">
               <a href="#PROPERTY" className={classes.a}>
                 <img
-                  src={PropImg}
+                  src={ProperteyFinImg}
                   width={200}
                   height={200}
-                  style={{ backgroundColor: "white", borderRadius: "40px" }}
+                  style={{ backgroundColor: "white", borderRadius: "20px" }}
                 />
                 <h2>Property Bridging Finance</h2>
                 <p>
@@ -73,7 +75,12 @@ function Services() {
             </div>
             <div className="col-md-3 col-lg-3">
               <a href="#ATTORNEY" className={classes.a}>
-                <img src="" width={200} height={200} />
+                <img
+                  src={AttorneyImg}
+                  width={200}
+                  height={200}
+                  style={{ backgroundColor: "white", borderRadius: "20px" }}
+                />
                 <h2>Attorney Fee Bridging Finance</h2>
                 <p>
                   Unlock your firm's potential by freeing up cash flow with our
@@ -84,7 +91,12 @@ function Services() {
 
             <div className="col-md-3 col-lg-3">
               <a href="#BUSINESS" className={classes.a}>
-                <img src="" width={200} height={200} />
+                <img
+                  src={BusinessGrowthImg}
+                  width={200}
+                  height={200}
+                  style={{ backgroundColor: "white", borderRadius: "20px" }}
+                />
                 <h2>Business Growth Finance</h2>
                 <p>
                   Put effort into expanding your business and generating profits
