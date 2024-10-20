@@ -7,6 +7,7 @@ import { useState } from "react";
 import PropertyFrom from "../components/PropertyForm";
 import AttorneyForm from "../components/AttorneyForm";
 import classess from "../components/ApplyNow.module.css";
+import emailjs from "@emailjs/browser";
 
 function Applynow() {
   const [RafFormIsVisible, setRafFromIsVisible] = useState(true);
@@ -15,6 +16,15 @@ function Applynow() {
   const [currentHeading, setHeading] = useState(
     "RAF Bridging Finance Application"
   );
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      "service_u8tlaga",
+      "template_n9m23q4",
+      e.target,
+      "GdAx_D80jyZ88kjtc"
+    );
+  };
 
   function showPropertyForm() {
     setPropertyIsVisible(true);
@@ -26,6 +36,7 @@ function Applynow() {
     setRafFromIsVisible(true);
     setHeading("RAF Bridging Finance Application");
     setPropertyIsVisible(false);
+    setAttorneyIsVisible(false);
   }
   function showAttorneyForm() {
     setPropertyIsVisible(false);
@@ -70,9 +81,18 @@ function Applynow() {
               </p>
             </div>
             <div className=" col-sm-6 col-lg-4 col-md-6">
-              {RafFormIsVisible ? <RAFFrom /> : null}
+              <form action="" name="test">
+                <input type="text" name="to_name" placeholder="To Name" />
+                <input type="text" name="from_name" placeholder="From Name" />
+                <input type="text" name="message" placeholder="Message" />
+                <br />
+                <button type="submit" onClick={sendEmail}>
+                  Submit
+                </button>
+              </form>
+              {/* {RafFormIsVisible ? <RAFFrom /> : null}
               {PropertyFormIsVisible ? <PropertyFrom /> : null}
-              {AttorneyFormIsVisible ? <AttorneyForm /> : null}
+              {AttorneyFormIsVisible ? <AttorneyForm /> : null} */}
             </div>
           </div>
         </div>

@@ -38,7 +38,7 @@ function App() {
               is settled. Apply today and access the funds you need!
             </em>
           </p>
-          <Button name="Apply now" link=""></Button>
+          <Button name="Apply now" link="/ApplyNow"></Button>
         </div>
         <HowTo />
       </ContentBelow>
@@ -59,7 +59,7 @@ function App() {
                 peace of mind is our priority, and we’re here to make the
                 process as smooth and supportive as possible.
               </p>
-              <Button name="More about us" link=""></Button>
+              <Button name="More about us" link="/AboutUs"></Button>
             </div>
             <div className="col-sm-5 col-md-5">
               <img src={AboutImg} width={500} className=" img-fluid"></img>
