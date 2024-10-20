@@ -1,7 +1,7 @@
 import ContentBelow from "../components/ContentBelow";
 import Head from "../components/Head";
 import background from "../images/services_background.png";
-import road from "../images/road.png";
+import RAF from "../images/RAF_bridge.webp";
 import PropImg from "../images/Prop_Icon.webp";
 import classes from "../components/Services.module.css";
 import Button from "../components/Button";
@@ -46,10 +46,10 @@ function Services() {
             <div className="col-md-3 col-lg-3">
               <a href="#RAF" className={classes.a}>
                 <img
-                  src={road}
+                  src={RAF}
                   width={200}
                   height={200}
-                  style={{ backgroundColor: "white" }}
+                  style={{ backgroundColor: "white", borderRadius: "20px" }}
                 />
                 <h2>RAF Bridging Finance</h2>
                 <p>
@@ -267,7 +267,7 @@ function Services() {
                   </p>
                 </ol>
                 <h5>What you need to apply</h5>
-                <ol>
+                <ol className={classes.ol}>
                   <li>Business Registration</li>
                   <li>Court Order / Settlement Letter</li>
                   <li>Invoices, Purchase Orders, or Tender Documents</li>

@@ -50,12 +50,29 @@ em {
   font-weight: 300;
   line-height: 1.6;
 }
+@media (min-width: 576px) {
+  .how_div {
+    background-color: white;
+    padding-top: 60px;
+    padding: 16px;
+    color: #113358;
+    width: 50%;
+  }
+  .stepBlocks {
+    margin-top: 100px;
+  }
+}
+
 .how_div {
   background-color: white;
   padding-top: 60px;
-
+  padding: 5px;
+  margin-top: 60px;
+  position: relative;
+  margin: auto;
   color: #113358;
 }
+
 .how_div h3 {
   font-size: 23px;
 }
@@ -163,4 +180,22 @@ em {
   font-weight: 500;
   line-height: 48px;
   color: #347cb6;
+}
+@media (max-width: 576px) {
+  .aboutUs h2 {
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 700;
+    line-height: 72px;
+    color: #347cb6;
+  }
+}
+@media (max-width: 768px) {
+  .aboutUs h2 {
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 700;
+    line-height: 72px;
+    color: #347cb6;
+  }
 }

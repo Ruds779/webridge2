@@ -6,14 +6,14 @@ function Footer() {
   return (
     <>
       <footer className="container-fluid footer">
-        <div className="container">
+        <div className="">
           <div className="row">
             {/* <!-- Logo and description --> */}
             <div className="col-lg-3 col-md-6 mb-4">
               <div className="footer-logo">
-                <div style={{ width: 300 }}>
+                <div>
                   <a href="https://www.webridge.co.za/">
-                    <img className="" src={LogoImg} width={300} />{" "}
+                    <img className=" img-fluid" src={LogoImg} width={300} />
                   </a>
 
                   <p>
@@ -91,8 +91,8 @@ function Footer() {
                 <a href="#" className="me-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="25"
+                    height="25"
                     fill="currentColor"
                     class="bi bi-facebook"
                     viewBox="0 0 16 16"
@@ -103,8 +103,8 @@ function Footer() {
                 <a href="#" className="me-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="25"
+                    height="25"
                     fill="currentColor"
                     class="bi bi-linkedin"
                     viewBox="0 0 16 16"
@@ -115,8 +115,8 @@ function Footer() {
                 <a href="#" className="me-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="25"
+                    height="25"
                     fill="currentColor"
                     class="bi bi-instagram"
                     viewBox="0 0 16 16"

@@ -6,14 +6,14 @@ import StepImage from "../../images/4-Steps-WeBridge-1.png";
 function HowTo() {
   return (
     <>
-      <div className="container-fluid w-50 text-center m-5 p-2 mx-auto">
+      <div className="container-fluid text-center m-5 p-2 mx-auto">
         <div className={classes.how_div}>
           <h1>How does it work</h1>
           <h3>4 easy steps:</h3>
-          <div style={{ marginTop: 170 }}>
+          <div className={classes.stepBlocks}>
             <div className={`row ${classes["steps-container"]}`}>
               {/* Left steps */}
-              <div className="col-lg-5 col-md-6">
+              <div className="col-lg-5 col-md-6 col-sm-8">
                 <div className={classes["step"]}>
                   <div className={classes["icon"]}>
                     <i className="fas fa-check-circle"></i>
@@ -64,7 +64,7 @@ function HowTo() {
               </div>
 
               {/* Right steps */}
-              <div className="col-lg-5 col-md-6">
+              <div className="col-lg-5 col-md-6 col-sm-8">
                 <div className={classes["step-right-2"]}>
                   <div className={classes["icon"]}>
                     <i className="fas fa-file-alt"></i>

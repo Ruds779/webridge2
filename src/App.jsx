@@ -15,7 +15,7 @@ function App() {
           <h2 className={classes.h2}>
             WeBridge: Your solution to advance payments on settled RAF Claims
           </h2>
-          <p>Changes</p>
+
           <p>
             - Settled RAF Claim Bridging Finance <br />
             - Attorney Fee Bridging Finance <br />

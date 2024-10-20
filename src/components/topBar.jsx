@@ -53,8 +53,8 @@ function Topbar() {
                 </a>
               </span>
             </div>
-            <div className=" col md-auto">
-              <div className="social-icons d-flex">
+            <div className="col md-auto">
+              <div className="social-icons">
                 <a href="#" className="me-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
