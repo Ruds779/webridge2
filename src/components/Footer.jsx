@@ -6,14 +6,14 @@ function Footer() {
   return (
     <>
       <footer className="container-fluid footer">
-        <div className="">
+        <div className=" container mx-auto">
           <div className="row">
             {/* <!-- Logo and description --> */}
             <div className="col-lg-3 col-md-6 mb-4">
               <div className="footer-logo">
                 <div>
                   <a href="https://www.webridge.co.za/">
-                    <img className=" img-fluid" src={LogoImg} width={300} />
+                    <img className=" img-fluid" src={LogoImg} />
                   </a>
 
                   <p>

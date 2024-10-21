@@ -3,8 +3,12 @@
   color: white;
   text-decoration: none;
 }
-.h2 {
-  font-size: 45px;
+
+@media (min-width: 576px) {
+  .h2 {
+    font-size: 45px;
+    text-align: center;
+  }
 }
 .p {
   font-family: "Poppins";

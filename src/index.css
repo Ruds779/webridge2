@@ -3,6 +3,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 * {
   margin: 0;
@@ -10,7 +12,8 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-@media (max-width: 576px) {
+
+/* @media (max-width: 576px) {
   * {
     width: 100%;
     margin: 0;
@@ -18,7 +21,7 @@ body {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-}
+} */
 a {
   color: white;
 }
@@ -34,9 +37,15 @@ a {
   padding: 30px;
   flex-wrap: wrap;
 }
-.footer div {
-  margin: 15px;
+@media (min-width: 576px) {
+  .footer div {
+    margin: 15px;
+  }
 }
+
+/* .footer div {
+  margin: 10px;
+} */
 .footer a {
   color: white;
   text-decoration: none;

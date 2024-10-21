@@ -9,24 +9,24 @@ export default function NavBar() {
   return (
     <nav className={`navbar navbar-expand-lg ${classes.navbar}`}>
       <div className="container w-auto">
-        <a className="navbar-brand" href="https://www.webridge.co.za">
-          <div className={classes.logo}>
-            <a href="https://www.webridge.co.za">
-              <img src={Logo} alt="Logo" />
-            </a>
-          </div>
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <a className="navbar-brand" href="https://www.webridge.co.za"></a>
+        <div className={classes.logo}>
+          <a href="https://www.webridge.co.za">
+            <img src={Logo} alt="Logo" />
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className={`navbar-nav ms-auto ${classes["nav-links"]}`}>
             <li className="nav-item">

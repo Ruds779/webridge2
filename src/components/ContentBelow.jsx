@@ -11,8 +11,8 @@ function ContentBelow({ children }) {
 
   return (
     <div style={contentStyle}>
-      <div className="row">
-        <div className="text-white col-sm-12 col-md-12">{children}</div>
+      <div className="row text-white">
+        <div className=" col-12">{children}</div>
       </div>
     </div>
   );
