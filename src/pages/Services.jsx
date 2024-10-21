@@ -31,7 +31,7 @@ function Services() {
         <h2 className="heading_space">Services</h2>
       </Head>
       <ContentBelow>
-        <div className="container-lg d-flex justify-content-center align-items-center p-lg-4">
+        <div className="container-lg justify-content-center align-items-center ">
           <div className="col-md-5 col-lg-7">
             <h2 className={classes.h2}>Bridging Finance Solutions</h2>
             <p>

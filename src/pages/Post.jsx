@@ -4,7 +4,7 @@ function Post() {
   return (
     <>
       {blogData.map((post) => (
-        <div className=" col-lg-8">
+        <div className="col-lg-8 col-sm-12 col-md-12">
           <div key={post.id} className="card mb-4 p-3">
             <div className="card-header">
               <h5>{post.title}</h5>

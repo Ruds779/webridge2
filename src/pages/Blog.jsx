@@ -10,7 +10,7 @@ function Blog() {
         <h2 className="heading_space">Blog</h2>
       </Head>
       <ContentBelow>
-        <div className="container w-50">
+        <div className="container col-12 col-md-9 col-lg-6">
           <h5>
             Stay updated with the latest insights, news, and expert tips from
             our blog, designed to help you navigate the world of RAF claims and
