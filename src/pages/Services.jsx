@@ -31,17 +31,14 @@ function Services() {
         <h2 className="heading_space">Services</h2>
       </Head>
       <ContentBelow>
-        <div className="container-lg justify-content-center align-items-center ">
-          <div className="col-md-5 col-lg-7">
+        <div className="container m-4 text-center mx-auto">
+          <div className="col-md-12 col-lg-12">
             <h2 className={classes.h2}>Bridging Finance Solutions</h2>
             <p>
               We offer comprehensive bridging finance solutions across multiple
               industries
             </p>
           </div>
-        </div>
-
-        <div className="container m-4 text-center mx-auto">
           <div className="row">
             <div className="col-md-3 col-lg-3">
               <a href="#RAF" className={classes.a}>

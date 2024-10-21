@@ -4,6 +4,7 @@
   background-color: inherit;
   color: white;
   border: none;
+  text-decoration: underline;
 }
 .button:hover {
   text-decoration: underline;

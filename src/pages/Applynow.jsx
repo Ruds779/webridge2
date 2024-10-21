@@ -14,8 +14,9 @@ function Applynow() {
   const [PropertyFormIsVisible, setPropertyIsVisible] = useState(false);
   const [AttorneyFormIsVisible, setAttorneyIsVisible] = useState(false);
   const [currentHeading, setHeading] = useState(
-    "RAF Bridging Finance Application"
+    "Apply Now for RAF Bridging Finance"
   );
+  const [upperHeading, setUpperHeading] = useState("Apply Now");
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
@@ -29,18 +30,21 @@ function Applynow() {
   function showPropertyForm() {
     setPropertyIsVisible(true);
     setHeading("Property Bridging Finance Application");
+    setUpperHeading("Apply Now for Property Advance");
     setRafFromIsVisible(false);
     setAttorneyIsVisible(false);
   }
   function showRafForm() {
     setRafFromIsVisible(true);
     setHeading("RAF Bridging Finance Application");
+    setUpperHeading("Apply Now for RAF Advance");
     setPropertyIsVisible(false);
     setAttorneyIsVisible(false);
   }
   function showAttorneyForm() {
     setPropertyIsVisible(false);
     setHeading("Attorney Bridging Finance Application");
+    setUpperHeading("Apply Now for Attorney Fee Advance");
     setRafFromIsVisible(false);
     setAttorneyIsVisible(true);
   }
@@ -48,7 +52,7 @@ function Applynow() {
   return (
     <>
       <Head imageUrl={background}>
-        <h2 className="heading_space">Apply Now</h2>
+        <h2 className="heading_space">{upperHeading}</h2>
       </Head>
       <ContentBelow>
         <div className="container">
@@ -77,11 +81,16 @@ function Applynow() {
               ) : null}
               <p>
                 For any other bridging finance requests, please send an email to
-                apply@webridge.co.za
+                <a
+                  href="mailto: apply@webridge.co.za"
+                  style={{ margin: "5px" }}
+                >
+                  apply@webridge.co.za
+                </a>
               </p>
             </div>
             <div className=" col-sm-6 col-lg-4 col-md-6">
-              <form action="" name="test">
+              {/* <form action="" name="test">
                 <input type="text" name="to_name" placeholder="To Name" />
                 <input type="text" name="from_name" placeholder="From Name" />
                 <input type="text" name="message" placeholder="Message" />
@@ -89,10 +98,10 @@ function Applynow() {
                 <button type="submit" onClick={sendEmail}>
                   Submit
                 </button>
-              </form>
-              {/* {RafFormIsVisible ? <RAFFrom /> : null}
+              </form> */}
+              {RafFormIsVisible ? <RAFFrom /> : null}
               {PropertyFormIsVisible ? <PropertyFrom /> : null}
-              {AttorneyFormIsVisible ? <AttorneyForm /> : null} */}
+              {AttorneyFormIsVisible ? <AttorneyForm /> : null}
             </div>
           </div>
         </div>
